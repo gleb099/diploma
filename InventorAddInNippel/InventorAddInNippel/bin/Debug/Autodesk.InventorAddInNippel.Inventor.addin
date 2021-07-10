@@ -1,0 +1,14 @@
+<Addin Type="Standard">
+  <!--Created for Autodesk Inventor Version 25.0-->
+  <ClassId>{aaf318a2-17d8-41d2-9b32-6c8be5813c5e}</ClassId>
+  <ClientId>{aaf318a2-17d8-41d2-9b32-6c8be5813c5e}</ClientId>
+  <DisplayName>InventorAddInNippel</DisplayName>
+  <Description>InventorAddInNippel</Description>
+  <Assembly>C:\Users\Глеб\source\repos\InventorAddInNippel\InventorAddInNippel\bin\Debug\InventorAddInNippel.dll</Assembly>
+  <LoadOnStartUp>1</LoadOnStartUp>
+  <UserUnloadable>1</UserUnloadable>
+  <Hidden>0</Hidden>
+  <SupportedSoftwareVersionGreaterThan>24..</SupportedSoftwareVersionGreaterThan>
+  <DataVersion>1</DataVersion>
+  <UserInterfaceVersion>1</UserInterfaceVersion>
+</Addin>

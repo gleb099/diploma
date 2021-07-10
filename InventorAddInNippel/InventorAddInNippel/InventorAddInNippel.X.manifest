@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+
+  <assemblyIdentity name="InventorAddInNippel" version="1.0.0.0"></assemblyIdentity>
+
+  <clrClass clsid="{aaf318a2-17d8-41d2-9b32-6c8be5813c5e}" progid="InventorAddInNippel.StandardAddInServer" threadingModel="Both" name="InventorAddInNippel.StandardAddInServer" runtimeVersion=""></clrClass>
+
+  <file name="InventorAddInNippel.dll" hashalg="SHA1"></file>
+
+</assembly>

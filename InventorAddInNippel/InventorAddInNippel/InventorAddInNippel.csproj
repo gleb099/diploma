@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DC284CE-6572-439D-ADA3-E703FF8498B6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InvAddIn</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="autodesk.inventor.interop, Version=25.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Autodesk.Inventor.Interop\v4.0_25.0.0.0__d84147f8b4276564\autodesk.inventor.interop.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ButtonNip.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAddInServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InventorAddInNippel.X.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Autodesk.InventorAddInNippel.Inventor.addin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_01Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_01Standart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole1">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧШН.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧКН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧШНП.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧШНПmew.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧКН2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧПНК1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ЧПНК2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН1.2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН1.21.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН2ф.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shn2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shn2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН211.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН21ф.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ШН21фi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КН2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КН11.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КН21.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПК1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПК2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПКд2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПКд1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_ШН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Нн_ШН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ннн_ШН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh1_sh.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh1_tr.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh2_sh.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh2_tr.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_КН1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_КН22.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_ПК1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_КН11.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_КН12.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_КН221.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_КН2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_ПК11.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Н_ПК2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large_fig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large_new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Труба.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Труба_2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Труба_3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Transparent-backgr-jglcGqONeay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chbtr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgCB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgCB2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh_ch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sh_ch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tr_ch8 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBig2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nip.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+        if exist "%ProgramFiles%\Microsoft SDKs\Windows\v6.0\bin\mt.exe" set var="%ProgramFiles%\Microsoft SDKs\Windows\v6.0\bin\mt.exe"
+		if exist "%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\mt.exe" set var="%ProgramFiles%\Microsoft SDKs\Windows\v7.0\bin\mt.exe"
+		if exist "%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\bin\mt.exe" set var="%ProgramFiles%\Microsoft SDKs\Windows\v6.0A\bin\mt.exe"
+		if exist "%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\bin\mt.exe" set var="%ProgramFiles%\Microsoft SDKs\Windows\v7.0A\bin\mt.exe"
+		if exist "%PROGRAMFILES(x86)%\Microsoft SDKs\Windows\v6.0A\bin\mt.exe" set var=%PROGRAMFILES(x86)%\Microsoft SDKs\Windows\v6.0A\bin\mt.exe"
+		if exist "%PROGRAMFILES(x86)%\Microsoft SDKs\Windows\v7.0A\bin\mt.exe" set var="%PROGRAMFILES(x86)%\Microsoft SDKs\Windows\v7.0A\bin\mt.exe" 
+		if exist "%PROGRAMFILES%\Windows Kits\8.0\bin\x64\mt.exe" set var="%PROGRAMFILES%\Windows Kits\8.0\bin\x64\mt.exe"
+		if exist "%PROGRAMFILES%\Windows Kits\8.0\bin\x86\mt.exe" set var="%PROGRAMFILES%\Windows Kits\8.0\bin\x86\mt.exe"
+		if exist "%PROGRAMFILES(x86)%\Windows Kits\8.0\bin\x64\mt.exe" set var="%PROGRAMFILES(x86)%\Windows Kits\8.0\bin\x64\mt.exe"
+		if exist "%PROGRAMFILES(x86)%\Windows Kits\8.0\bin\x86\mt.exe" set var="%PROGRAMFILES(x86)%\Windows Kits\8.0\bin\x86\mt.exe"
+		if exist "%PROGRAMFILES(x86)%\Windows Kits\10\bin\x64\mt.exe" set var="%PROGRAMFILES(x86)%\Windows Kits\10\bin\x64\mt.exe"
+		if exist "%PROGRAMFILES(x86)%\Windows Kits\10\bin\x86\mt.exe" set var="%PROGRAMFILES(x86)%\Windows Kits\10\bin\x86\mt.exe"
+        call %var% -manifest "$(ProjectDir)InventorAddInNippel.X.manifest" -outputresource:"$(TargetPath)";#2
+			XCopy "$(TargetPath)" "%AppData%\Autodesk\ApplicationPlugins\$(TargetName)\" /Y /R
+		    XCopy "$(ProjectDir)Autodesk.InventorAddInNippel.Inventor.addin" "%AppData%\Autodesk\ApplicationPlugins\$(TargetName)\" /Y /R   
+	</PostBuildEvent>
+  </PropertyGroup>
+</Project>
